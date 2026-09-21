@@ -24,3 +24,24 @@ Este pipeline realiza o processamento de ponta a ponta de dados psicométricos d
 Instale as dependências executando:
 ```bash
 pip install -r requirements.txt
+
+## ⚙️ Execução na Prática
+
+```bash
+DATA_DIR="./data" OUT_DIR="./outputs" python src/pipeline_final.py
+
+## 📊 Saídas Geradas
+
+O algoritmo gera automaticamente uma pasta outputs contendo:
+
+    RESULTADOS_FINAIS.xlsx: Planilha com todas as tabelas formatadas prontas para o manuscrito.
+
+    results.json: Dicionário contendo as métricas de validação cruzada, ARI e inércia.
+
+    📁 figuras/: 8 gráficos prontos em alta resolução (Matplotlib).
+
+    📁 tabelas/: Exportações individuais em CSV.
+
+⚠️ Nota Ética
+
+Os dados originais da pesquisa estão sob sigilo ético e não estão incluídos neste repositório. Um dataset mock (fictício) pode ser providenciado na pasta data/ apenas para fins de teste da arquitetura do código.
